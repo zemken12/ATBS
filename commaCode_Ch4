@@ -1,0 +1,27 @@
+###
+This script was written to answer the Ch.4 exercise 'commaCode' practice project, see below:
+Say you have a list value like this:
+
+
+spam = ['apples', 'bananas', 'tofu', 'cats']
+Write a function that takes a list value as an argument and returns a string with all the 
+items separated by a comma and a space, with and inserted before the last item. For example,
+passing the previous spam list to the function would return 'apples, bananas, tofu, and cats'.
+But your function should be able to work with any list value passed to it.
+
+Source: http://www.codeskulptor.org/#user39_bGWndmvh2QXS2eT_0.py
+
+
+###
+
+spam = ['apples', 'bananas', 'tofu', 'cats']
+
+def comma(a_list):
+    count=0
+    a_string=''
+    while count < len(a_list)-1:
+        a_string += a_list[count] + ', '
+        count+=1
+    return a_string + 'and ' + a_list[count] 
+
+print comma(spam)
